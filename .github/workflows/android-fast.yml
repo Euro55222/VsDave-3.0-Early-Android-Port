@@ -76,19 +76,19 @@ jobs:
         version: [20.04, 22.04]
     steps:
       - name: Checkout
-        uses: actions/checkout@main
+        uses: actions/checkout@2
       - name: Setup Android NDK
-        uses: nttld/setup-ndk@main
+        uses: nttld/setup-ndk@2
         id: setup-ndk
         with:
           ndk-version: r21e
       - name: Setup Java JDK
-        uses: actions/setup-java@main
+        uses: actions/setup-java@2
         with:
           distribution: zulu
           java-version: 12
       - name: Setup Android SDK
-        uses: android-actions/setup-android@main
+        uses: android-actions/setup-android@2
       - name: Setup Haxe
         uses: krdlab/setup-haxe@master
         with:
