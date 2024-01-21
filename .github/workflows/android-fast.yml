@@ -34,7 +34,7 @@ jobs:
         run: |
           haxelib setup ~/haxelib
           haxelib install lime 7.9.0 --quiet
-          haxelib git hxcpp https://github.com/mcagabe19/hxcpp-fastspeed.git
+          haxelib --quiet install hxcpp
           haxelib install openfl 9.1.0 --quiet
           haxelib install actuate 1.8.9 --quiet
           haxelib --never git flixel https://github.com/mcagabe19/flixel-4.9.0.git
