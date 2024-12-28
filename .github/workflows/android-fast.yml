@@ -1,7 +1,3 @@
-name: Android Build CI (Fast)
-
-on: [workflow_dispatch]
-
 jobs:
   build-armv7-and-arm64:
     - name: Android
