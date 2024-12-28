@@ -1,7 +1,16 @@
+name: Android Build CI (Fast)
+
+on: [workflow_dispatch]
+
 jobs:
-  buildAndroid:
-    name: buildAndroid
-    runs-on: ubuntu-latest
+  build-armv7-and-arm64:
+    name: Android
+    runs-on: ubuntu-${{ matrix.version }}
+    strategy:
+      matrix:
+        arch: [arm64, armv7]
+        build: [release]
+        version: [20.04, 22.04]
     steps:
       - name: Checkout
         uses: actions/checkout@v3.1.0
