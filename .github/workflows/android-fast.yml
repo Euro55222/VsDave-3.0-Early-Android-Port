@@ -1,12 +1,6 @@
 jobs:
-  build-armv7-and-arm64:
-    - name: Android
-      runs-on: ubuntu-${{ matrix.version }}
-      strategy:
-      matrix:
-        arch: [arm64, armv7]
-        build: [release]
-        version: [20.04, 22.04]
+  build:
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@main
