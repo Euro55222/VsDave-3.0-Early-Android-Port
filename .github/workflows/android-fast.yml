@@ -16,9 +16,9 @@ jobs:
     name: buildAndroid
     runs-on: ubuntu-latest
     steps:
-     - name: Checkout
+      - name: Checkout
        uses: actions/checkout@v3.1.0
-     - name: Setup Android NDK
+      - name: Setup Android NDK
        uses: nttld/setup-ndk@main
        id: setup-ndk
        with:
