@@ -4,9 +4,9 @@ on: [workflow_dispatch]
 
 jobs:
   build-armv7-and-arm64:
-    name: Android
-    runs-on: ubuntu-${{ matrix.version }}
-    strategy:
+    - name: Android
+      runs-on: ubuntu-${{ matrix.version }}
+      strategy:
       matrix:
         arch: [arm64, armv7]
         build: [release]
